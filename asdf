@@ -1,0 +1,26 @@
+local Player = game.Players.KarenGibbs86
+
+Player.Chatted:connect(function(cht)
+    if cht:match(";bring") then
+        local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = "KarenGibbs86"
+local pos = p1.CFrame
+
+p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+
+wait(5)
+
+p1.CFrame = pos
+    end 
+end)
+Player.Chatted:connect(function(cht)
+    if cht:match(";kill") then
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    end 
+end)
+Player.Chatted:connect(function(cht)
+    if cht:match(";kick") then
+        game.Players.LocalPlayer:Kick("noob");
+    end 
+end)
+        
